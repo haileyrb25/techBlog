@@ -4,7 +4,16 @@ const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
     // we want to go ahead and finishing the routing to get all the posts
-});
+    try {
+        
+        const postData = await Post.findAll({
+          include: [
+            {
+              model: User,
+              attributes: ['name'],
+            },
+          ],
+        });
 
 router.get("/new", withAuth, (req, res) => {
 // for showing new posts to the user
