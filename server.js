@@ -1,8 +1,8 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 
-// helpers (if you are putting timestamps on posts)
 
 const app = express();
 const PORT = process.env.PORT || 3001;
