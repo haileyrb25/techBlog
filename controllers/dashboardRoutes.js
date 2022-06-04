@@ -3,7 +3,7 @@ const { Post } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
-    // we want to go ahead and finishing the routing to get all the posts
+    // we want to go ahead and finish the routing to get all the posts
     try {
         
         const postData = await Post.findAll({
