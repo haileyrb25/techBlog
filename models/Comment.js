@@ -35,7 +35,7 @@ Comment.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment',
+        modelName: 'Comment',
     }
 );
 module.exports = Comment;
